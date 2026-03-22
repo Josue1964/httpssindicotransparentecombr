@@ -325,7 +325,7 @@ export const services: ServiceData[] = [
     slug: "pre-diagnostico-fachada-drone",
     title: "Pré-Diagnóstico de Fachada com Drones",
     shortTitle: "Inspeção com Drone",
-    icon: Plane,
+    icon: Radar,
     summary: "Inspeção aérea gratuita para identificar sinais de infiltração, trincas, desplacamentos e deteriorações na fachada do seu condomínio, com registro visual detalhado.",
     description: "O pré-diagnóstico de fachada com drones é um serviço 100% gratuito que utiliza tecnologia de inspeção aérea para identificar sinais de problemas nas fachadas do condomínio. Com imagens detalhadas captadas por drones, é possível mapear trincas, infiltrações, desplacamentos e deteriorações sem necessidade de andaimes ou balancins, reduzindo riscos e oferecendo uma visão preliminar clara para apoiar a tomada de decisão sobre manutenção ou obras.",
     audience: [
