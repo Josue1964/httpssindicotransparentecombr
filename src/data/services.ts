@@ -360,7 +360,7 @@ export const services: ServiceData[] = [
     slug: "manutencao-elevadores",
     title: "Manutenção de Elevadores Transparente e Justa",
     shortTitle: "Elevadores",
-    icon: CableCar,
+    icon: DoorOpen,
     summary: "Visita técnica gratuita e diagnóstico imparcial do contrato de manutenção de elevadores do seu condomínio. Economia real com peças inclusas.",
     description: "Síndicos: descubra se o contrato atual de manutenção de elevadores é justo. Realizamos uma visita técnica 100% gratuita com checklist completo — casa de máquinas, poço, cabina e portas — seguida de análise do contrato vigente, comparação de mercado e plano de redução de custos. Nosso diagnóstico imparcial entrega relatório detalhado com recomendações de modernização e proposta com peças inclusas, para que seu condomínio tenha segurança e economia.",
     audience: [
