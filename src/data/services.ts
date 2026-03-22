@@ -1,4 +1,4 @@
-import { Briefcase, UserCheck, Search, ClipboardCheck, HardHat, Settings, FileText, Target, MessageSquareMore, Plane, CableCar } from "lucide-react";
+import { Briefcase, UserCheck, Search, ClipboardCheck, Construction, Settings, FileText, Target, MessageSquareMore, Radar, DoorOpen } from "lucide-react";
 
 export interface ServiceData {
   slug: string;
@@ -155,7 +155,7 @@ export const services: ServiceData[] = [
     slug: "apoio-obras-reformas",
     title: "Apoio em Obras e Reformas",
     shortTitle: "Obras e Reformas",
-    icon: HardHat,
+    icon: Construction,
     summary: "Suporte organizacional e estratégico para demandas de manutenção, obras e melhorias no condomínio, com clareza, acompanhamento e comunicação eficiente.",
     description: "O apoio em obras e reformas oferece suporte para o condomínio organizar, planejar e acompanhar demandas de manutenção, obras e melhorias. Atuamos na organização do processo, na comunicação com moradores, no acompanhamento de cronogramas e na documentação de cada etapa, garantindo mais controle e transparência.",
     audience: [
@@ -325,7 +325,7 @@ export const services: ServiceData[] = [
     slug: "pre-diagnostico-fachada-drone",
     title: "Pré-Diagnóstico de Fachada com Drones",
     shortTitle: "Inspeção com Drone",
-    icon: Plane,
+    icon: Radar,
     summary: "Inspeção aérea gratuita para identificar sinais de infiltração, trincas, desplacamentos e deteriorações na fachada do seu condomínio, com registro visual detalhado.",
     description: "O pré-diagnóstico de fachada com drones é um serviço 100% gratuito que utiliza tecnologia de inspeção aérea para identificar sinais de problemas nas fachadas do condomínio. Com imagens detalhadas captadas por drones, é possível mapear trincas, infiltrações, desplacamentos e deteriorações sem necessidade de andaimes ou balancins, reduzindo riscos e oferecendo uma visão preliminar clara para apoiar a tomada de decisão sobre manutenção ou obras.",
     audience: [
@@ -360,7 +360,7 @@ export const services: ServiceData[] = [
     slug: "manutencao-elevadores",
     title: "Manutenção de Elevadores Transparente e Justa",
     shortTitle: "Elevadores",
-    icon: CableCar,
+    icon: DoorOpen,
     summary: "Visita técnica gratuita e diagnóstico imparcial do contrato de manutenção de elevadores do seu condomínio. Economia real com peças inclusas.",
     description: "Síndicos: descubra se o contrato atual de manutenção de elevadores é justo. Realizamos uma visita técnica 100% gratuita com checklist completo — casa de máquinas, poço, cabina e portas — seguida de análise do contrato vigente, comparação de mercado e plano de redução de custos. Nosso diagnóstico imparcial entrega relatório detalhado com recomendações de modernização e proposta com peças inclusas, para que seu condomínio tenha segurança e economia.",
     audience: [
