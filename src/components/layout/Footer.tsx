@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { services } from "@/data/services";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-white.png";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <img src={logo} alt="Síndico Transparente" className="h-20 w-auto brightness-0 invert" />
+            <img src={logo} alt="Síndico Transparente" className="h-20 w-auto" />
             <p className="text-sm leading-relaxed text-blue-200/70 prose-readable">
               Apoio estratégico para síndicos e condomínios com foco em organização, transparência e resultados.
             </p>
