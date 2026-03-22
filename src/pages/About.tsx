@@ -65,17 +65,17 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-16">
+      <section className="bg-foreground py-16">
         <div className="container-wide section-padding">
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-2xl font-bold sm:text-3xl">Quer conhecer melhor nossos serviços?</h2>
-              <p className="mt-3 text-muted-foreground">Descubra como podemos apoiar o seu condomínio.</p>
+              <h2 className="text-2xl font-bold text-white sm:text-3xl">Quer conhecer melhor nossos serviços?</h2>
+              <p className="mt-3 text-blue-200/70">Descubra como podemos apoiar o seu condomínio.</p>
               <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                <Button variant="hero" size="lg" asChild>
+                <Button size="lg" className="bg-primary text-white hover:bg-primary/90 font-semibold" asChild>
                   <Link to="/servicos">Ver serviços</Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button size="lg" className="border-2 border-white text-white bg-transparent hover:bg-white/10 font-semibold" asChild>
                   <Link to="/contato">Fale conosco</Link>
                 </Button>
               </div>

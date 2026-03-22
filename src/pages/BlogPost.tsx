@@ -13,7 +13,6 @@ export default function BlogPost() {
 
   const related = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3);
 
-  // Simple markdown-like rendering
   const renderContent = (content: string) => {
     return content.split("\n\n").map((block, i) => {
       if (block.startsWith("## ")) {
@@ -63,14 +62,14 @@ export default function BlogPost() {
 
             {/* CTA */}
             <ScrollReveal delay={0.2}>
-              <div className="mt-16 rounded-2xl bg-primary p-8 text-center">
-                <h2 className="text-xl font-bold text-primary-foreground sm:text-2xl">Precisa de apoio na gestão do seu condomínio?</h2>
-                <p className="mt-2 text-primary-foreground/80 text-sm">Conheça nossos serviços e descubra como podemos ajudar.</p>
+              <div className="mt-16 rounded-2xl bg-foreground p-8 text-center">
+                <h2 className="text-xl font-bold text-white sm:text-2xl">Precisa de apoio na gestão do seu condomínio?</h2>
+                <p className="mt-2 text-blue-200/70 text-sm">Conheça nossos serviços e descubra como podemos ajudar.</p>
                 <div className="mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                  <Button variant="accent" size="lg" asChild>
+                  <Button size="lg" className="bg-primary text-white hover:bg-primary/90 font-semibold" asChild>
                     <Link to="/servicos">Ver serviços</Link>
                   </Button>
-                  <Button variant="hero-outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild>
+                  <Button size="lg" className="border-2 border-white text-white bg-transparent hover:bg-white/10 font-semibold" asChild>
                     <Link to="/solicitar-proposta">Solicitar proposta</Link>
                   </Button>
                 </div>
@@ -89,16 +88,18 @@ export default function BlogPost() {
               <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {related.map((p, i) => (
                   <ScrollReveal key={p.slug} delay={i * 0.08}>
-                    <Link
-                      to={`/blog/${p.slug}`}
-                      className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/20"
+                    <a
+                      href="https://sindicotransparente.com.br/blog/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/30"
                     >
                       <span className="text-xs font-semibold uppercase tracking-wider text-primary">{p.category}</span>
                       <h3 className="mt-2 font-display text-base font-bold leading-snug group-hover:text-primary transition-colors">{p.title}</h3>
                       <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary">
                         Ler artigo <ArrowRight size={12} />
                       </span>
-                    </Link>
+                    </a>
                   </ScrollReveal>
                 ))}
               </div>

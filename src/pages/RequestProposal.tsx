@@ -24,14 +24,14 @@ export default function RequestProposal() {
 
   return (
     <Layout>
-      <section className="bg-primary py-16 lg:py-24">
+      <section className="bg-primary-dark py-16 lg:py-24">
         <div className="container-wide section-padding">
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-3xl font-bold text-primary-foreground sm:text-4xl lg:text-5xl" style={{ lineHeight: "1.1" }}>
+              <h1 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: "1.1" }}>
                 Solicite uma proposta para o seu condomínio
               </h1>
-              <p className="mt-4 text-lg text-primary-foreground/80">
+              <p className="mt-4 text-lg text-blue-200/70">
                 Preencha as informações abaixo para que possamos entender a necessidade do seu condomínio e apresentar a solução mais adequada.
               </p>
             </div>
@@ -88,7 +88,7 @@ export default function RequestProposal() {
                 </div>
               </div>
 
-              <Button type="submit" variant="hero" size="xl" className="mt-6 w-full sm:w-auto">
+              <Button type="submit" size="xl" className="mt-6 w-full bg-primary text-white hover:bg-primary/90 font-semibold sm:w-auto">
                 Enviar solicitação
               </Button>
 

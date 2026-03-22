@@ -15,12 +15,12 @@ const steps = [
 export default function HowItWorks() {
   return (
     <Layout>
-      <section className="bg-secondary py-16 lg:py-24">
+      <section className="bg-primary-dark py-16 lg:py-24">
         <div className="container-wide section-padding">
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl" style={{ lineHeight: "1.1" }}>Como funciona</h1>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <h1 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: "1.1" }}>Como funciona</h1>
+              <p className="mt-4 text-lg text-blue-200/70">
                 Nosso processo é simples, organizado e transparente. Conheça cada etapa, do primeiro contato até a entrega de resultados.
               </p>
             </div>
@@ -37,10 +37,10 @@ export default function HowItWorks() {
                 <ScrollReveal key={step.num} delay={i * 0.1}>
                   <div className="flex gap-6 rounded-2xl border border-border bg-card p-8 shadow-sm">
                     <div className="flex flex-col items-center">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-white">
                         <Icon size={28} />
                       </div>
-                      <span className="mt-2 font-display text-sm font-bold text-muted-foreground">{step.num}</span>
+                      <span className="mt-2 font-display text-sm font-bold text-primary">{step.num}</span>
                     </div>
                     <div>
                       <h2 className="font-display text-xl font-bold">{step.title}</h2>
@@ -53,14 +53,14 @@ export default function HowItWorks() {
           </div>
 
           <ScrollReveal delay={0.4}>
-            <div className="mt-16 rounded-2xl bg-primary p-8 text-center lg:p-12">
-              <h2 className="text-2xl font-bold text-primary-foreground sm:text-3xl">Pronto para começar?</h2>
-              <p className="mt-3 text-primary-foreground/80">O primeiro passo é entrar em contato. Sem compromisso.</p>
+            <div className="mt-16 rounded-2xl bg-foreground p-8 text-center lg:p-12">
+              <h2 className="text-2xl font-bold text-white sm:text-3xl">Pronto para começar?</h2>
+              <p className="mt-3 text-blue-200/70">O primeiro passo é entrar em contato. Sem compromisso.</p>
               <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                <Button variant="accent" size="xl" asChild>
+                <Button size="xl" className="bg-primary text-white hover:bg-primary/90 shadow-md font-semibold text-base" asChild>
                   <Link to="/solicitar-proposta">Solicitar proposta</Link>
                 </Button>
-                <Button variant="hero-outline" size="xl" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild>
+                <Button size="xl" className="border-2 border-white text-white bg-transparent hover:bg-white/10 font-semibold text-base" asChild>
                   <Link to="/contato">Fale conosco</Link>
                 </Button>
               </div>

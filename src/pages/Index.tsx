@@ -4,36 +4,42 @@ import { services } from "@/data/services";
 import { blogPosts } from "@/data/blog";
 import ScrollReveal from "@/components/ScrollReveal";
 import Layout from "@/components/layout/Layout";
-import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageCircle, Shield, BarChart3, Users, Eye } from "lucide-react";
 
 const highlights = [
-  "Atendimento consultivo",
-  "Soluções práticas",
-  "Mais organização",
-  "Mais transparência",
+  { icon: Users, label: "Atendimento consultivo" },
+  { icon: Shield, label: "Soluções práticas" },
+  { icon: BarChart3, label: "Mais organização" },
+  { icon: Eye, label: "Mais transparência" },
+];
+
+const differentials = [
+  { title: "Foco em resultados", desc: "Cada serviço é desenhado para gerar impacto real na gestão do condomínio." },
+  { title: "Transparência total", desc: "Processos claros, relatórios acessíveis e comunicação direta com o síndico." },
+  { title: "Apoio estratégico", desc: "Não apenas operacional — ajudamos na tomada de decisão e planejamento." },
+  { title: "Experiência condominial", desc: "Conhecemos a realidade dos condomínios e falamos a língua dos síndicos." },
 ];
 
 export default function Index() {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-primary py-20 lg:py-28">
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, hsl(168 55% 60%) 0%, transparent 50%), radial-gradient(circle at 80% 80%, hsl(36 75% 50%) 0%, transparent 40%)" }} />
+      {/* Hero — white bg */}
+      <section className="relative overflow-hidden bg-background py-20 lg:py-28">
         <div className="container-wide section-padding relative">
           <ScrollReveal>
             <div className="mx-auto max-w-3xl text-center">
-              <h1 className="text-3xl font-bold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl" style={{ lineHeight: "1.1" }}>
+              <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl" style={{ lineHeight: "1.1" }}>
                 Soluções completas para síndicos e condomínios com mais organização, transparência e segurança
               </h1>
-              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                 A Síndico Transparente oferece apoio estratégico para a gestão condominial, com serviços que ajudam a organizar processos, melhorar decisões, acompanhar demandas e trazer mais clareza para a rotina do condomínio.
               </p>
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                <Button variant="accent" size="xl" asChild>
+                <Button size="xl" className="bg-primary text-white hover:bg-primary/90 shadow-md font-semibold text-base" asChild>
                   <Link to="/solicitar-proposta">Solicitar proposta <ArrowRight size={18} /></Link>
                 </Button>
-                <Button variant="hero-outline" size="xl" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild>
-                  <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+                <Button variant="whatsapp" size="xl" asChild>
+                  <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer">
                     <MessageCircle size={18} /> Falar no WhatsApp
                   </a>
                 </Button>
@@ -43,19 +49,22 @@ export default function Index() {
 
           <ScrollReveal delay={0.3}>
             <div className="mx-auto mt-12 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
-              {highlights.map(h => (
-                <div key={h} className="flex items-center gap-2 rounded-xl bg-primary-foreground/10 px-4 py-3 text-sm font-medium text-primary-foreground">
-                  <CheckCircle2 size={16} className="shrink-0 text-accent" />
-                  {h}
-                </div>
-              ))}
+              {highlights.map(h => {
+                const Icon = h.icon;
+                return (
+                  <div key={h.label} className="flex items-center gap-2 rounded-xl border border-border bg-surface-warm px-4 py-3 text-sm font-medium text-foreground">
+                    <Icon size={16} className="shrink-0 text-primary" />
+                    {h.label}
+                  </div>
+                );
+              })}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-20 lg:py-28">
+      {/* Services — light gray bg */}
+      <section className="bg-secondary py-20 lg:py-28">
         <div className="container-wide section-padding">
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -73,14 +82,14 @@ export default function Index() {
                 <ScrollReveal key={s.slug} delay={i * 0.08}>
                   <Link
                     to={`/servicos/${s.slug}`}
-                    className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/20"
+                    className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/30"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                       <Icon size={24} />
                     </div>
                     <h3 className="mt-4 font-display text-lg font-bold">{s.title}</h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{s.summary}</p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:underline">
                       Saiba mais <ArrowRight size={14} />
                     </span>
                   </Link>
@@ -91,13 +100,13 @@ export default function Index() {
         </div>
       </section>
 
-      {/* How it works preview */}
-      <section className="bg-secondary py-20 lg:py-28">
+      {/* How it works — dark blue bg */}
+      <section className="bg-primary-dark py-20 lg:py-28">
         <div className="container-wide section-padding">
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">Como funciona</h2>
-              <p className="mt-4 text-muted-foreground">Um processo simples, organizado e transparente do início ao resultado.</p>
+              <h2 className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">Como funciona</h2>
+              <p className="mt-4 text-blue-200/70">Um processo simples, organizado e transparente do início ao resultado.</p>
             </div>
           </ScrollReveal>
 
@@ -110,9 +119,9 @@ export default function Index() {
               { step: "05", title: "Resultado", desc: "Acompanhamos a execução até a entrega de resultados." },
             ].map((item, i) => (
               <ScrollReveal key={item.step} delay={i * 0.1}>
-                <div className="text-center">
-                  <span className="inline-block font-display text-3xl font-bold text-primary/20">{item.step}</span>
-                  <h3 className="mt-2 font-display text-lg font-bold">{item.title}</h3>
+                <div className="rounded-2xl bg-white p-6 text-center">
+                  <span className="inline-block font-display text-3xl font-bold text-primary">{item.step}</span>
+                  <h3 className="mt-2 font-display text-lg font-bold text-foreground">{item.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
                 </div>
               </ScrollReveal>
@@ -121,7 +130,7 @@ export default function Index() {
 
           <ScrollReveal delay={0.4}>
             <div className="mt-12 text-center">
-              <Button variant="default" size="lg" asChild>
+              <Button size="lg" className="bg-primary text-white hover:bg-primary/90 font-semibold" asChild>
                 <Link to="/como-funciona">Ver detalhes do processo</Link>
               </Button>
             </div>
@@ -129,8 +138,33 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Blog preview */}
+      {/* Differentials — white bg */}
       <section className="py-20 lg:py-28">
+        <div className="container-wide section-padding">
+          <ScrollReveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">Por que escolher a Síndico Transparente</h2>
+            </div>
+          </ScrollReveal>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {differentials.map((d, i) => (
+              <ScrollReveal key={d.title} delay={i * 0.08}>
+                <div className="rounded-2xl bg-surface-warm p-6">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                    <CheckCircle2 size={22} />
+                  </div>
+                  <h3 className="mt-4 font-display text-lg font-bold">{d.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog preview — white bg */}
+      <section className="bg-secondary py-20 lg:py-28">
         <div className="container-wide section-padding">
           <ScrollReveal>
             <div className="flex items-end justify-between">
@@ -138,18 +172,20 @@ export default function Index() {
                 <h2 className="text-2xl font-bold sm:text-3xl">Artigos recentes</h2>
                 <p className="mt-2 text-muted-foreground">Conteúdo para apoiar síndicos e gestores condominiais.</p>
               </div>
-              <Link to="/blog" className="hidden text-sm font-semibold text-primary hover:underline sm:inline-flex items-center gap-1">
+              <a href="https://sindicotransparente.com.br/blog/" target="_blank" rel="noopener noreferrer" className="hidden text-sm font-semibold text-primary hover:underline sm:inline-flex items-center gap-1">
                 Ver todos <ArrowRight size={14} />
-              </Link>
+              </a>
             </div>
           </ScrollReveal>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {blogPosts.slice(0, 3).map((post, i) => (
               <ScrollReveal key={post.slug} delay={i * 0.1}>
-                <Link
-                  to={`/blog/${post.slug}`}
-                  className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/20"
+                <a
+                  href="https://sindicotransparente.com.br/blog/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/30"
                 >
                   <span className="text-xs font-semibold uppercase tracking-wider text-primary">{post.category}</span>
                   <h3 className="mt-2 font-display text-lg font-bold leading-snug group-hover:text-primary transition-colors">{post.title}</h3>
@@ -159,29 +195,29 @@ export default function Index() {
                     <span>·</span>
                     <span>{post.readTime} de leitura</span>
                   </div>
-                </Link>
+                </a>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-primary py-16 lg:py-24">
+      {/* CTA — #0F172A premium dark */}
+      <section className="bg-foreground py-16 lg:py-24">
         <div className="container-wide section-padding">
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-2xl font-bold text-primary-foreground sm:text-3xl lg:text-4xl">
+              <h2 className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
                 Pronto para melhorar a gestão do seu condomínio?
               </h2>
-              <p className="mt-4 text-primary-foreground/80">
+              <p className="mt-4 text-blue-200/70">
                 Entre em contato e descubra como podemos ajudar. Sem compromisso.
               </p>
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                <Button variant="accent" size="xl" asChild>
+                <Button size="xl" className="bg-primary text-white hover:bg-primary/90 shadow-md font-semibold text-base" asChild>
                   <Link to="/solicitar-proposta">Solicitar proposta</Link>
                 </Button>
-                <Button variant="hero-outline" size="xl" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild>
+                <Button size="xl" className="border-2 border-white text-white bg-transparent hover:bg-white/10 font-semibold text-base" asChild>
                   <Link to="/contato">Fale conosco</Link>
                 </Button>
               </div>
