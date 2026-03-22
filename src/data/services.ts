@@ -155,7 +155,7 @@ export const services: ServiceData[] = [
     slug: "apoio-obras-reformas",
     title: "Apoio em Obras e Reformas",
     shortTitle: "Obras e Reformas",
-    icon: HardHat,
+    icon: Construction,
     summary: "Suporte organizacional e estratégico para demandas de manutenção, obras e melhorias no condomínio, com clareza, acompanhamento e comunicação eficiente.",
     description: "O apoio em obras e reformas oferece suporte para o condomínio organizar, planejar e acompanhar demandas de manutenção, obras e melhorias. Atuamos na organização do processo, na comunicação com moradores, no acompanhamento de cronogramas e na documentação de cada etapa, garantindo mais controle e transparência.",
     audience: [
