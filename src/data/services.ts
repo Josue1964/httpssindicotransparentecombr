@@ -401,6 +401,3 @@ export function getServiceBySlug(slug: string): ServiceData | undefined {
 export function getRelatedServices(slugs: string[]): ServiceData[] {
   return slugs.map(s => services.find(sv => sv.slug === s)).filter(Boolean) as ServiceData[];
 }
-export function getRelatedServices(slugs: string[]): ServiceData[] {
-  return slugs.map(s => services.find(sv => sv.slug === s)).filter(Boolean) as ServiceData[];
-}
