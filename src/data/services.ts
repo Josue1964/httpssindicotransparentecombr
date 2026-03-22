@@ -1,4 +1,4 @@
-import { Briefcase, UserCheck, Search, ClipboardCheck, HardHat, Settings, FileText, Target } from "lucide-react";
+import { Briefcase, UserCheck, Search, ClipboardCheck, HardHat, Settings, FileText, Target, MessageSquareMore } from "lucide-react";
 
 export interface ServiceData {
   slug: string;
