@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <img src={logo} alt="Síndico Transparente" className="h-10 w-auto" />
+            <img src={logo} alt="Síndico Transparente" className="h-10 w-auto brightness-0 invert" />
             <p className="text-sm leading-relaxed text-blue-200/70 prose-readable">
               Apoio estratégico para síndicos e condomínios com foco em organização, transparência e resultados.
             </p>
