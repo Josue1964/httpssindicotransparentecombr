@@ -357,8 +357,44 @@ export const services: ServiceData[] = [
     relatedSlugs: ["apoio-obras-reformas", "diagnostico-condominial", "cotacoes-para-condominios"],
   },
 ];
+  {
+    slug: "manutencao-elevadores",
+    title: "Manutenção de Elevadores Transparente e Justa",
+    shortTitle: "Elevadores",
+    icon: CableCar,
+    summary: "Visita técnica gratuita e diagnóstico imparcial do contrato de manutenção de elevadores do seu condomínio. Economia real com peças inclusas.",
+    description: "Síndicos: descubra se o contrato atual de manutenção de elevadores é justo. Realizamos uma visita técnica 100% gratuita com checklist completo — casa de máquinas, poço, cabina e portas — seguida de análise do contrato vigente, comparação de mercado e plano de redução de custos. Nosso diagnóstico imparcial entrega relatório detalhado com recomendações de modernização e proposta com peças inclusas, para que seu condomínio tenha segurança e economia.",
+    audience: [
+      "Síndicos que suspeitam estar pagando caro pela manutenção",
+      "Condomínios com contratos vagos e sem transparência",
+      "Gestores que precisam adequar elevadores às normas ABNT e prefeitura",
+      "Condomínios com elevadores antigos que precisam de modernização",
+    ],
+    benefits: [
+      "Visita técnica e diagnóstico 100% gratuitos, sem compromisso",
+      "Checklist técnico completo: casa de máquinas, poço, cabina e portas",
+      "Análise detalhada do contrato atual com comparação de mercado",
+      "Proposta com peças inclusas e plano de economia realista",
+      "Conformidade com normas ABNT (NBR 15597, NBR 16083, NBR NM 207)",
+      "Adequação às exigências da prefeitura: registro, ART e vistoria periódica",
+      "Recomendações de modernização quando necessário",
+      "Sugestão para renegociação ou troca de empresa",
+    ],
+    steps: [
+      { title: "Agende a visita", description: "Preencha o formulário ou fale pelo WhatsApp em menos de 1 minuto. Sem custo e sem compromisso." },
+      { title: "Técnico visita o condomínio", description: "Checklist completo: casa de máquinas, poço, cabina, portas — tudo inspecionado por técnico especializado." },
+      { title: "Receba relatório + economia", description: "Análise do contrato, comparação de mercado e plano de redução de custos com peças inclusas." },
+    ],
+    faqs: [
+      { question: "A visita técnica é realmente gratuita?", answer: "Sim, 100% gratuita e sem compromisso. Você recebe um relatório completo com diagnóstico imparcial do estado dos elevadores e análise do contrato atual." },
+      { question: "Quais normas técnicas são consideradas?", answer: "Nosso diagnóstico considera as normas ABNT NBR 15597, NBR 16083 e NBR NM 207, além das exigências municipais de registro, ART e vistoria periódica." },
+      { question: "O que acontece se meu contrato atual for justo?", answer: "Informamos isso no relatório. Nosso compromisso é com a transparência — se o contrato está adequado, você terá essa certeza documentada." },
+      { question: "Atendem elevadores de qualquer marca?", answer: "Sim. Temos técnicos especializados para cada tipo de equipamento, independente da marca ou modelo." },
+    ],
+    relatedSlugs: ["diagnostico-condominial", "consultoria-para-sindicos", "apoio-obras-reformas"],
+  },
 
-export function getServiceBySlug(slug: string): ServiceData | undefined {
+
   return services.find(s => s.slug === slug);
 }
 
