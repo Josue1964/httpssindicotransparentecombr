@@ -52,9 +52,12 @@ export default function Header() {
           )}
         </nav>
 
-        <div className="hidden lg:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <Button size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-md font-semibold" asChild>
             <Link to="/solicitar-proposta">Solicitar proposta</Link>
+          </Button>
+          <Button variant="whatsapp" size="lg" asChild>
+            <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </Button>
         </div>
 
