@@ -26,6 +26,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          dark: "hsl(var(--primary-dark))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -62,7 +63,7 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         "surface-warm": "hsl(var(--surface-warm))",
-        "surface-teal": "hsl(var(--surface-teal-subtle))",
+        "surface-blue": "hsl(var(--surface-blue-subtle))",
       },
       borderRadius: {
         lg: "var(--radius)",

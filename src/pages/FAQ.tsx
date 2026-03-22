@@ -42,15 +42,15 @@ export default function FAQ() {
           ))}
 
           <ScrollReveal delay={0.3}>
-            <div className="mt-16 rounded-2xl bg-secondary p-8 text-center">
-              <h2 className="text-xl font-bold">Ainda tem dúvidas?</h2>
-              <p className="mt-2 text-muted-foreground">Entre em contato e teremos prazer em esclarecer.</p>
+            <div className="mt-16 rounded-2xl bg-foreground p-8 text-center">
+              <h2 className="text-xl font-bold text-white">Ainda tem dúvidas?</h2>
+              <p className="mt-2 text-blue-200/70">Entre em contato e teremos prazer em esclarecer.</p>
               <div className="mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                <Button variant="hero" size="lg" asChild>
+                <Button size="lg" className="bg-primary text-white hover:bg-primary/90 font-semibold" asChild>
                   <Link to="/contato">Fale conosco</Link>
                 </Button>
                 <Button variant="whatsapp" size="lg" asChild>
-                  <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                  <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                 </Button>
               </div>
             </div>

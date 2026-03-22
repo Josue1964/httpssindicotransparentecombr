@@ -18,17 +18,17 @@ export default function ServiceDetail() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary py-16 lg:py-24">
+      <section className="bg-primary-dark py-16 lg:py-24">
         <div className="container-wide section-padding">
           <ScrollReveal>
             <div className="mx-auto max-w-3xl text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-foreground/10 text-primary-foreground">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 text-white">
                 <Icon size={32} />
               </div>
-              <h1 className="mt-6 text-3xl font-bold text-primary-foreground sm:text-4xl lg:text-5xl" style={{ lineHeight: "1.1" }}>
+              <h1 className="mt-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: "1.1" }}>
                 {service.title}
               </h1>
-              <p className="mt-4 text-lg text-primary-foreground/80">{service.summary}</p>
+              <p className="mt-4 text-lg text-blue-200/70">{service.summary}</p>
             </div>
           </ScrollReveal>
         </div>
@@ -78,20 +78,20 @@ export default function ServiceDetail() {
       </section>
 
       {/* Process */}
-      <section className="bg-secondary py-16 lg:py-24">
+      <section className="bg-primary-dark py-16 lg:py-24">
         <div className="container-narrow section-padding">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold sm:text-3xl">Como funciona</h2>
+            <h2 className="text-2xl font-bold text-white sm:text-3xl">Como funciona</h2>
           </ScrollReveal>
           <div className="mt-8 space-y-6">
             {service.steps.map((step, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="flex gap-5 rounded-2xl bg-card p-6 shadow-sm">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+                <div className="flex gap-5 rounded-2xl bg-white p-6 shadow-sm">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                     {i + 1}
                   </span>
                   <div>
-                    <h3 className="font-display text-lg font-bold">{step.title}</h3>
+                    <h3 className="font-display text-lg font-bold text-foreground">{step.title}</h3>
                     <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{step.description}</p>
                   </div>
                 </div>
@@ -119,13 +119,13 @@ export default function ServiceDetail() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-16">
+      <section className="bg-foreground py-16">
         <div className="container-wide section-padding">
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-2xl font-bold text-primary-foreground sm:text-3xl">Interessado neste serviço?</h2>
-              <p className="mt-3 text-primary-foreground/80">Solicite uma proposta personalizada e descubra como podemos ajudar o seu condomínio.</p>
-              <Button variant="accent" size="xl" className="mt-6" asChild>
+              <h2 className="text-2xl font-bold text-white sm:text-3xl">Interessado neste serviço?</h2>
+              <p className="mt-3 text-blue-200/70">Solicite uma proposta personalizada e descubra como podemos ajudar o seu condomínio.</p>
+              <Button size="xl" className="mt-6 bg-primary text-white hover:bg-primary/90 shadow-md font-semibold text-base" asChild>
                 <Link to="/solicitar-proposta">Solicitar proposta</Link>
               </Button>
             </div>
@@ -147,9 +147,9 @@ export default function ServiceDetail() {
                   <ScrollReveal key={r.slug} delay={i * 0.08}>
                     <Link
                       to={`/servicos/${r.slug}`}
-                      className="group flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/20"
+                      className="group flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/30"
                     >
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                         <RIcon size={20} />
                       </div>
                       <div>

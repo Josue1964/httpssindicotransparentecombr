@@ -32,14 +32,14 @@ export default function Services() {
                 <ScrollReveal key={s.slug} delay={i * 0.08}>
                   <Link
                     to={`/servicos/${s.slug}`}
-                    className="group flex h-full flex-col rounded-2xl border border-border bg-card p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/20"
+                    className="group flex h-full flex-col rounded-2xl border border-border bg-card p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/30"
                   >
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                       <Icon size={28} />
                     </div>
                     <h2 className="mt-5 font-display text-xl font-bold">{s.title}</h2>
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{s.summary}</p>
-                    <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                    <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:underline">
                       Saiba mais <ArrowRight size={14} />
                     </span>
                   </Link>
@@ -51,13 +51,13 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-16">
+      <section className="bg-foreground py-16">
         <div className="container-wide section-padding">
           <ScrollReveal>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-2xl font-bold text-primary-foreground sm:text-3xl">Não sabe qual serviço é ideal?</h2>
-              <p className="mt-3 text-primary-foreground/80">Entre em contato e ajudaremos a identificar a melhor solução para o seu condomínio.</p>
-              <Button variant="accent" size="xl" className="mt-6" asChild>
+              <h2 className="text-2xl font-bold text-white sm:text-3xl">Não sabe qual serviço é ideal?</h2>
+              <p className="mt-3 text-blue-200/70">Entre em contato e ajudaremos a identificar a melhor solução para o seu condomínio.</p>
+              <Button size="xl" className="mt-6 bg-primary text-white hover:bg-primary/90 shadow-md font-semibold text-base" asChild>
                 <Link to="/solicitar-proposta">Solicitar proposta</Link>
               </Button>
             </div>

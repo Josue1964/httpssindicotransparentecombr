@@ -41,17 +41,17 @@ export default function Contact() {
                 </p>
 
                 <div className="mt-8 space-y-5">
-                  <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:shadow-md hover:border-primary/20">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[hsl(142,70%,40%)]/10 text-[hsl(142,70%,40%)]">
+                  <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:shadow-md hover:border-primary/30">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
                       <MessageCircle size={20} />
                     </div>
                     <div>
                       <p className="text-sm font-semibold">WhatsApp</p>
-                      <p className="text-xs text-muted-foreground">(11) 99999-9999</p>
+                      <p className="text-xs text-muted-foreground">(21) 99375-0707</p>
                     </div>
                   </a>
 
-                  <a href="mailto:contato@sindicotransparente.com.br" className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:shadow-md hover:border-primary/20">
+                  <a href="mailto:contato@sindicotransparente.com.br" className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:shadow-md hover:border-primary/30">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <Mail size={20} />
                     </div>
@@ -61,13 +61,13 @@ export default function Contact() {
                     </div>
                   </a>
 
-                  <a href="tel:+5511999999999" className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:shadow-md hover:border-primary/20">
+                  <a href="tel:+5521993750707" className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:shadow-md hover:border-primary/30">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <Phone size={20} />
                     </div>
                     <div>
                       <p className="text-sm font-semibold">Telefone</p>
-                      <p className="text-xs text-muted-foreground">(11) 99999-9999</p>
+                      <p className="text-xs text-muted-foreground">(21) 99375-0707</p>
                     </div>
                   </a>
                 </div>
@@ -96,7 +96,7 @@ export default function Contact() {
                       <textarea required rows={5} value={form.mensagem} onChange={e => setForm({...form, mensagem: e.target.value})} className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20" />
                     </div>
                   </div>
-                  <Button type="submit" variant="hero" size="lg" className="mt-5 w-full sm:w-auto">
+                  <Button type="submit" size="lg" className="mt-5 w-full bg-primary text-white hover:bg-primary/90 font-semibold sm:w-auto">
                     Enviar mensagem
                   </Button>
                 </form>

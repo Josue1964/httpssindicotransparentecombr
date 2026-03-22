@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { blogPosts, blogCategories } from "@/data/blog";
 import ScrollReveal from "@/components/ScrollReveal";
 import Layout from "@/components/layout/Layout";
@@ -48,7 +47,7 @@ export default function Blog() {
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => setCategory(null)}
-                  className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${!category ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:bg-border"}`}
+                  className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${!category ? "bg-primary text-white" : "bg-secondary text-muted-foreground hover:bg-border"}`}
                 >
                   Todos
                 </button>
@@ -56,7 +55,7 @@ export default function Blog() {
                   <button
                     key={cat}
                     onClick={() => setCategory(cat)}
-                    className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${category === cat ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:bg-border"}`}
+                    className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${category === cat ? "bg-primary text-white" : "bg-secondary text-muted-foreground hover:bg-border"}`}
                   >
                     {cat}
                   </button>
@@ -69,9 +68,11 @@ export default function Blog() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((post, i) => (
               <ScrollReveal key={post.slug} delay={i * 0.06}>
-                <Link
-                  to={`/blog/${post.slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/20"
+                <a
+                  href="https://sindicotransparente.com.br/blog/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/30 hover:scale-[1.02]"
                 >
                   <span className="text-xs font-semibold uppercase tracking-wider text-primary">{post.category}</span>
                   <h2 className="mt-2 font-display text-lg font-bold leading-snug group-hover:text-primary transition-colors">{post.title}</h2>
@@ -81,7 +82,7 @@ export default function Blog() {
                     <span>·</span>
                     <span>{post.readTime} de leitura</span>
                   </div>
-                </Link>
+                </a>
               </ScrollReveal>
             ))}
           </div>
