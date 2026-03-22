@@ -1,4 +1,4 @@
-import { Briefcase, UserCheck, Search, ClipboardCheck, HardHat, Settings, FileText, Target } from "lucide-react";
+import { Briefcase, UserCheck, Search, ClipboardCheck, HardHat, Settings, FileText, Target, MessageSquareMore } from "lucide-react";
 
 export interface ServiceData {
   slug: string;
@@ -286,6 +286,40 @@ export const services: ServiceData[] = [
       { question: "Condomínios pequenos também podem contratar?", answer: "Sim. O apoio estratégico é adaptável a condomínios de todos os portes. O escopo é ajustado conforme a realidade e as necessidades de cada condomínio." },
     ],
     relatedSlugs: ["consultoria-para-sindicos", "diagnostico-condominial", "organizacao-administrativa"],
+  },
+  {
+    slug: "whatsapp-inteligente",
+    title: "WhatsApp Inteligente para Condomínios",
+    shortTitle: "WhatsApp Inteligente",
+    icon: MessageSquareMore,
+    summary: "Solução de atendimento profissional via WhatsApp com automação, triagem inteligente, organização por setores e histórico centralizado para administradoras e síndicos profissionais.",
+    description: "O WhatsApp Inteligente é uma solução recomendada pela Síndico Transparente para profissionalizar o atendimento de administradoras de condomínios e síndicos profissionais. Estruture um canal de comunicação mais ágil, organizado e eficiente com automação de respostas iniciais, distribuição por setores, captação de leads e histórico centralizado — tudo para transformar o WhatsApp em uma operação realmente profissional.",
+    audience: [
+      "Administradoras de condomínios que atendem alto volume de mensagens",
+      "Síndicos profissionais que gerenciam múltiplos condomínios",
+      "Operações com alto volume de solicitações e leads via WhatsApp",
+      "Prestadores de serviços condominiais que precisam organizar comercial e suporte",
+    ],
+    benefits: [
+      "Atendimento inicial automatizado 24 horas por dia",
+      "Triagem e distribuição inteligente por setor ou responsável",
+      "Captação e qualificação de leads com fluxos organizados",
+      "Histórico centralizado de todas as conversas e demandas",
+      "Organização por perfil: síndicos, moradores, fornecedores e prospects",
+      "Mais conversão comercial e menos perda de contatos",
+    ],
+    steps: [
+      { title: "Análise da operação", description: "Entendemos o volume de atendimento, os setores envolvidos e as necessidades de comunicação do seu negócio." },
+      { title: "Configuração personalizada", description: "Estruturamos os fluxos de automação, chatbot, setores e regras de distribuição conforme sua operação." },
+      { title: "Implementação e treinamento", description: "Ativamos a solução e treinamos a equipe para operar o painel profissional de atendimento." },
+      { title: "Acompanhamento e otimização", description: "Monitoramos os resultados e ajustamos os fluxos para maximizar a eficiência e a conversão." },
+    ],
+    faqs: [
+      { question: "Essa solução funciona com o WhatsApp que já uso?", answer: "Sim. A solução utiliza a API oficial do WhatsApp Business, podendo ser integrada ao seu número atual ou a um novo número dedicado ao atendimento profissional." },
+      { question: "Preciso de conhecimento técnico para usar?", answer: "Não. O painel é intuitivo e a equipe recebe treinamento completo. A configuração inicial é feita pela nossa equipe de implementação." },
+      { question: "Serve para condomínios de qualquer porte?", answer: "Sim. A solução é ideal para qualquer operação que receba volume relevante de mensagens via WhatsApp, desde síndicos profissionais até grandes administradoras." },
+    ],
+    relatedSlugs: ["consultoria-para-sindicos", "sindico-profissional", "organizacao-administrativa"],
   },
 ];
 
