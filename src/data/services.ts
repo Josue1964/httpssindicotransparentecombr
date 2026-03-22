@@ -1,4 +1,4 @@
-import { Briefcase, UserCheck, Search, ClipboardCheck, HardHat, Settings, FileText, Target, MessageSquareMore } from "lucide-react";
+import { Briefcase, UserCheck, Search, ClipboardCheck, HardHat, Settings, FileText, Target, MessageSquareMore, Plane } from "lucide-react";
 
 export interface ServiceData {
   slug: string;
@@ -320,6 +320,41 @@ export const services: ServiceData[] = [
       { question: "Serve para condomínios de qualquer porte?", answer: "Sim. A solução é ideal para qualquer operação que receba volume relevante de mensagens via WhatsApp, desde síndicos profissionais até grandes administradoras." },
     ],
     relatedSlugs: ["consultoria-para-sindicos", "sindico-profissional", "organizacao-administrativa"],
+  },
+  {
+    slug: "pre-diagnostico-fachada-drone",
+    title: "Pré-Diagnóstico de Fachada com Drones",
+    shortTitle: "Inspeção com Drone",
+    icon: Plane,
+    summary: "Inspeção aérea gratuita para identificar sinais de infiltração, trincas, desplacamentos e deteriorações na fachada do seu condomínio, com registro visual detalhado.",
+    description: "O pré-diagnóstico de fachada com drones é um serviço 100% gratuito que utiliza tecnologia de inspeção aérea para identificar sinais de problemas nas fachadas do condomínio. Com imagens detalhadas captadas por drones, é possível mapear trincas, infiltrações, desplacamentos e deteriorações sem necessidade de andaimes ou balancins, reduzindo riscos e oferecendo uma visão preliminar clara para apoiar a tomada de decisão sobre manutenção ou obras.",
+    audience: [
+      "Condomínios com fachadas que apresentam sinais visíveis de desgaste",
+      "Síndicos que planejam manutenção preventiva de fachadas",
+      "Condomínios que precisam de laudo ou avaliação técnica de fachada",
+      "Gestores que querem antecipar problemas antes que se agravem",
+    ],
+    benefits: [
+      "100% gratuito — sem custo inicial para o pré-diagnóstico",
+      "Tecnologia de ponta com drones para inspeções seguras e detalhadas",
+      "Registro visual completo para apoiar decisões e priorizações",
+      "Mais assertividade para evitar surpresas e priorizar ações",
+      "Identificação rápida de pontos de atenção na fachada",
+      "Indicação dos próximos passos caso haja necessidade de intervenção",
+    ],
+    steps: [
+      { title: "Agendamento", description: "Entre em contato pelo WhatsApp informando o nome do condomínio, bairro/cidade e o motivo do pedido (infiltração, trinca, desplacamento, etc.)." },
+      { title: "Inspeção aérea", description: "Realizamos o voo com drone para capturar imagens detalhadas de todas as fachadas do edifício." },
+      { title: "Análise preliminar", description: "Analisamos as imagens para identificar sinais de patologias, deteriorações e pontos de atenção." },
+      { title: "Relatório visual", description: "Entregamos um relatório com registro fotográfico e orientações sobre os próximos passos recomendados." },
+    ],
+    faqs: [
+      { question: "O pré-diagnóstico é realmente gratuito?", answer: "Sim, 100% gratuito. É um levantamento preliminar por imagens para orientar a tomada de decisão. Caso haja necessidade de avaliação técnica completa ou execução de obra, indicamos os próximos passos." },
+      { question: "Preciso de autorização para o voo do drone?", answer: "Nossa equipe cuida de todas as autorizações necessárias conforme a regulamentação vigente. Basta agendar e alinhar o melhor dia e horário." },
+      { question: "O pré-diagnóstico substitui um laudo técnico de fachada?", answer: "Não. O pré-diagnóstico é uma avaliação preliminar visual. Caso sejam identificados pontos críticos, recomendamos uma avaliação técnica completa com profissional habilitado." },
+      { question: "Quais tipos de problemas o drone consegue identificar?", answer: "O drone identifica sinais visíveis como trincas, fissuras, desplacamento de revestimento, infiltrações aparentes, manchas de umidade e deterioração geral da fachada." },
+    ],
+    relatedSlugs: ["apoio-obras-reformas", "diagnostico-condominial", "cotacoes-para-condominios"],
   },
 ];
 
