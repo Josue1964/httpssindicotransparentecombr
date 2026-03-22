@@ -22,7 +22,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-primary-dark">
       <div className="container-wide section-padding flex h-16 items-center justify-between lg:h-18">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Síndico Transparente" className="h-10 w-auto" />
+          <img src={logo} alt="Síndico Transparente" className="h-10 w-auto brightness-0 invert" />
         </Link>
 
         {/* Desktop nav */}
