@@ -356,7 +356,6 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["apoio-obras-reformas", "diagnostico-condominial", "cotacoes-para-condominios"],
   },
-];
   {
     slug: "manutencao-elevadores",
     title: "Manutenção de Elevadores Transparente e Justa",
@@ -393,11 +392,15 @@ export const services: ServiceData[] = [
     ],
     relatedSlugs: ["diagnostico-condominial", "consultoria-para-sindicos", "apoio-obras-reformas"],
   },
+];
 
-
+export function getServiceBySlug(slug: string): ServiceData | undefined {
   return services.find(s => s.slug === slug);
 }
 
+export function getRelatedServices(slugs: string[]): ServiceData[] {
+  return slugs.map(s => services.find(sv => sv.slug === s)).filter(Boolean) as ServiceData[];
+}
 export function getRelatedServices(slugs: string[]): ServiceData[] {
   return slugs.map(s => services.find(sv => sv.slug === s)).filter(Boolean) as ServiceData[];
 }
