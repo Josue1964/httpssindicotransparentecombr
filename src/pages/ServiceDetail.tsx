@@ -125,9 +125,14 @@ export default function ServiceDetail() {
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-2xl font-bold text-white sm:text-3xl">Interessado neste serviço?</h2>
               <p className="mt-3 text-blue-200/70">Solicite uma proposta personalizada e descubra como podemos ajudar o seu condomínio.</p>
-              <Button size="xl" className="mt-6 bg-primary text-white hover:bg-primary/90 shadow-md font-semibold text-base" asChild>
-                <Link to="/solicitar-proposta">Solicitar proposta</Link>
-              </Button>
+              <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+                <Button size="xl" className="bg-primary text-white hover:bg-primary/90 shadow-md font-semibold text-base" asChild>
+                  <Link to="/solicitar-proposta">Solicitar proposta</Link>
+                </Button>
+                <Button variant="whatsapp" size="xl" asChild>
+                  <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+                </Button>
+              </div>
             </div>
           </ScrollReveal>
         </div>

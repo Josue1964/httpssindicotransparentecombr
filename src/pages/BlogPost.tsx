@@ -72,6 +72,9 @@ export default function BlogPost() {
                   <Button size="lg" className="border-2 border-white text-white bg-transparent hover:bg-white/10 font-semibold" asChild>
                     <Link to="/solicitar-proposta">Solicitar proposta</Link>
                   </Button>
+                  <Button variant="whatsapp" size="lg" asChild>
+                    <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+                  </Button>
                 </div>
               </div>
             </ScrollReveal>

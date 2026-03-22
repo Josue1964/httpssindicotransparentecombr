@@ -110,6 +110,9 @@ export default function Header() {
               <Button size="lg" className="mt-2 bg-primary text-white hover:bg-primary/90 font-semibold" asChild>
                 <Link to="/solicitar-proposta" onClick={() => setOpen(false)}>Solicitar proposta</Link>
               </Button>
+              <Button variant="whatsapp" size="lg" asChild>
+                <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>WhatsApp</a>
+              </Button>
             </nav>
           </motion.div>
         )}
