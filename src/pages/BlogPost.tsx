@@ -92,7 +92,7 @@ export default function BlogPost() {
                 {related.map((p, i) => (
                   <ScrollReveal key={p.slug} delay={i * 0.08}>
                     <a
-                      href="https://sindicotransparente.com.br/blog/"
+                      href={p.wpUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/30"
