@@ -72,9 +72,6 @@ export default function BlogPost() {
                   <Button size="lg" className="border-2 border-white text-white bg-transparent hover:bg-white/10 font-semibold" asChild>
                     <Link to="/solicitar-proposta">Solicitar proposta</Link>
                   </Button>
-                  <Button variant="whatsapp" size="lg" asChild>
-                    <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
-                  </Button>
                 </div>
               </div>
             </ScrollReveal>
@@ -92,7 +89,7 @@ export default function BlogPost() {
                 {related.map((p, i) => (
                   <ScrollReveal key={p.slug} delay={i * 0.08}>
                     <a
-                      href={p.wpUrl}
+                      href="https://sindicotransparente.com.br/blog/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/30"

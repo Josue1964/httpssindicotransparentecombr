@@ -1,4 +1,4 @@
-import { Briefcase, UserCheck, Search, ClipboardCheck, Construction, Settings, FileText, Target, MessageSquareMore, Radar, DoorOpen } from "lucide-react";
+import { Briefcase, UserCheck, Search, ClipboardCheck, HardHat, Settings, FileText, Target } from "lucide-react";
 
 export interface ServiceData {
   slug: string;
@@ -155,7 +155,7 @@ export const services: ServiceData[] = [
     slug: "apoio-obras-reformas",
     title: "Apoio em Obras e Reformas",
     shortTitle: "Obras e Reformas",
-    icon: Construction,
+    icon: HardHat,
     summary: "Suporte organizacional e estratégico para demandas de manutenção, obras e melhorias no condomínio, com clareza, acompanhamento e comunicação eficiente.",
     description: "O apoio em obras e reformas oferece suporte para o condomínio organizar, planejar e acompanhar demandas de manutenção, obras e melhorias. Atuamos na organização do processo, na comunicação com moradores, no acompanhamento de cronogramas e na documentação de cada etapa, garantindo mais controle e transparência.",
     audience: [
@@ -286,111 +286,6 @@ export const services: ServiceData[] = [
       { question: "Condomínios pequenos também podem contratar?", answer: "Sim. O apoio estratégico é adaptável a condomínios de todos os portes. O escopo é ajustado conforme a realidade e as necessidades de cada condomínio." },
     ],
     relatedSlugs: ["consultoria-para-sindicos", "diagnostico-condominial", "organizacao-administrativa"],
-  },
-  {
-    slug: "whatsapp-inteligente",
-    title: "WhatsApp Inteligente para Condomínios",
-    shortTitle: "WhatsApp Inteligente",
-    icon: MessageSquareMore,
-    summary: "Solução de atendimento profissional via WhatsApp com automação, triagem inteligente, organização por setores e histórico centralizado para administradoras e síndicos profissionais.",
-    description: "O WhatsApp Inteligente é uma solução recomendada pela Síndico Transparente para profissionalizar o atendimento de administradoras de condomínios e síndicos profissionais. Estruture um canal de comunicação mais ágil, organizado e eficiente com automação de respostas iniciais, distribuição por setores, captação de leads e histórico centralizado — tudo para transformar o WhatsApp em uma operação realmente profissional.",
-    audience: [
-      "Administradoras de condomínios que atendem alto volume de mensagens",
-      "Síndicos profissionais que gerenciam múltiplos condomínios",
-      "Operações com alto volume de solicitações e leads via WhatsApp",
-      "Prestadores de serviços condominiais que precisam organizar comercial e suporte",
-    ],
-    benefits: [
-      "Atendimento inicial automatizado 24 horas por dia",
-      "Triagem e distribuição inteligente por setor ou responsável",
-      "Captação e qualificação de leads com fluxos organizados",
-      "Histórico centralizado de todas as conversas e demandas",
-      "Organização por perfil: síndicos, moradores, fornecedores e prospects",
-      "Mais conversão comercial e menos perda de contatos",
-    ],
-    steps: [
-      { title: "Análise da operação", description: "Entendemos o volume de atendimento, os setores envolvidos e as necessidades de comunicação do seu negócio." },
-      { title: "Configuração personalizada", description: "Estruturamos os fluxos de automação, chatbot, setores e regras de distribuição conforme sua operação." },
-      { title: "Implementação e treinamento", description: "Ativamos a solução e treinamos a equipe para operar o painel profissional de atendimento." },
-      { title: "Acompanhamento e otimização", description: "Monitoramos os resultados e ajustamos os fluxos para maximizar a eficiência e a conversão." },
-    ],
-    faqs: [
-      { question: "Essa solução funciona com o WhatsApp que já uso?", answer: "Sim. A solução utiliza a API oficial do WhatsApp Business, podendo ser integrada ao seu número atual ou a um novo número dedicado ao atendimento profissional." },
-      { question: "Preciso de conhecimento técnico para usar?", answer: "Não. O painel é intuitivo e a equipe recebe treinamento completo. A configuração inicial é feita pela nossa equipe de implementação." },
-      { question: "Serve para condomínios de qualquer porte?", answer: "Sim. A solução é ideal para qualquer operação que receba volume relevante de mensagens via WhatsApp, desde síndicos profissionais até grandes administradoras." },
-    ],
-    relatedSlugs: ["consultoria-para-sindicos", "sindico-profissional", "organizacao-administrativa"],
-  },
-  {
-    slug: "pre-diagnostico-fachada-drone",
-    title: "Pré-Diagnóstico de Fachada com Drones",
-    shortTitle: "Inspeção com Drone",
-    icon: Radar,
-    summary: "Inspeção aérea gratuita para identificar sinais de infiltração, trincas, desplacamentos e deteriorações na fachada do seu condomínio, com registro visual detalhado.",
-    description: "O pré-diagnóstico de fachada com drones é um serviço 100% gratuito que utiliza tecnologia de inspeção aérea para identificar sinais de problemas nas fachadas do condomínio. Com imagens detalhadas captadas por drones, é possível mapear trincas, infiltrações, desplacamentos e deteriorações sem necessidade de andaimes ou balancins, reduzindo riscos e oferecendo uma visão preliminar clara para apoiar a tomada de decisão sobre manutenção ou obras.",
-    audience: [
-      "Condomínios com fachadas que apresentam sinais visíveis de desgaste",
-      "Síndicos que planejam manutenção preventiva de fachadas",
-      "Condomínios que precisam de laudo ou avaliação técnica de fachada",
-      "Gestores que querem antecipar problemas antes que se agravem",
-    ],
-    benefits: [
-      "100% gratuito — sem custo inicial para o pré-diagnóstico",
-      "Tecnologia de ponta com drones para inspeções seguras e detalhadas",
-      "Registro visual completo para apoiar decisões e priorizações",
-      "Mais assertividade para evitar surpresas e priorizar ações",
-      "Identificação rápida de pontos de atenção na fachada",
-      "Indicação dos próximos passos caso haja necessidade de intervenção",
-    ],
-    steps: [
-      { title: "Agendamento", description: "Entre em contato pelo WhatsApp informando o nome do condomínio, bairro/cidade e o motivo do pedido (infiltração, trinca, desplacamento, etc.)." },
-      { title: "Inspeção aérea", description: "Realizamos o voo com drone para capturar imagens detalhadas de todas as fachadas do edifício." },
-      { title: "Análise preliminar", description: "Analisamos as imagens para identificar sinais de patologias, deteriorações e pontos de atenção." },
-      { title: "Relatório visual", description: "Entregamos um relatório com registro fotográfico e orientações sobre os próximos passos recomendados." },
-    ],
-    faqs: [
-      { question: "O pré-diagnóstico é realmente gratuito?", answer: "Sim, 100% gratuito. É um levantamento preliminar por imagens para orientar a tomada de decisão. Caso haja necessidade de avaliação técnica completa ou execução de obra, indicamos os próximos passos." },
-      { question: "Preciso de autorização para o voo do drone?", answer: "Nossa equipe cuida de todas as autorizações necessárias conforme a regulamentação vigente. Basta agendar e alinhar o melhor dia e horário." },
-      { question: "O pré-diagnóstico substitui um laudo técnico de fachada?", answer: "Não. O pré-diagnóstico é uma avaliação preliminar visual. Caso sejam identificados pontos críticos, recomendamos uma avaliação técnica completa com profissional habilitado." },
-      { question: "Quais tipos de problemas o drone consegue identificar?", answer: "O drone identifica sinais visíveis como trincas, fissuras, desplacamento de revestimento, infiltrações aparentes, manchas de umidade e deterioração geral da fachada." },
-    ],
-    relatedSlugs: ["apoio-obras-reformas", "diagnostico-condominial", "cotacoes-para-condominios"],
-  },
-  {
-    slug: "manutencao-elevadores",
-    title: "Manutenção de Elevadores Transparente e Justa",
-    shortTitle: "Elevadores",
-    icon: DoorOpen,
-    summary: "Visita técnica gratuita e diagnóstico imparcial do contrato de manutenção de elevadores do seu condomínio. Economia real com peças inclusas.",
-    description: "Síndicos: descubra se o contrato atual de manutenção de elevadores é justo. Realizamos uma visita técnica 100% gratuita com checklist completo — casa de máquinas, poço, cabina e portas — seguida de análise do contrato vigente, comparação de mercado e plano de redução de custos. Nosso diagnóstico imparcial entrega relatório detalhado com recomendações de modernização e proposta com peças inclusas, para que seu condomínio tenha segurança e economia.",
-    audience: [
-      "Síndicos que suspeitam estar pagando caro pela manutenção",
-      "Condomínios com contratos vagos e sem transparência",
-      "Gestores que precisam adequar elevadores às normas ABNT e prefeitura",
-      "Condomínios com elevadores antigos que precisam de modernização",
-    ],
-    benefits: [
-      "Visita técnica e diagnóstico 100% gratuitos, sem compromisso",
-      "Checklist técnico completo: casa de máquinas, poço, cabina e portas",
-      "Análise detalhada do contrato atual com comparação de mercado",
-      "Proposta com peças inclusas e plano de economia realista",
-      "Conformidade com normas ABNT (NBR 15597, NBR 16083, NBR NM 207)",
-      "Adequação às exigências da prefeitura: registro, ART e vistoria periódica",
-      "Recomendações de modernização quando necessário",
-      "Sugestão para renegociação ou troca de empresa",
-    ],
-    steps: [
-      { title: "Agende a visita", description: "Preencha o formulário ou fale pelo WhatsApp em menos de 1 minuto. Sem custo e sem compromisso." },
-      { title: "Técnico visita o condomínio", description: "Checklist completo: casa de máquinas, poço, cabina, portas — tudo inspecionado por técnico especializado." },
-      { title: "Receba relatório + economia", description: "Análise do contrato, comparação de mercado e plano de redução de custos com peças inclusas." },
-    ],
-    faqs: [
-      { question: "A visita técnica é realmente gratuita?", answer: "Sim, 100% gratuita e sem compromisso. Você recebe um relatório completo com diagnóstico imparcial do estado dos elevadores e análise do contrato atual." },
-      { question: "Quais normas técnicas são consideradas?", answer: "Nosso diagnóstico considera as normas ABNT NBR 15597, NBR 16083 e NBR NM 207, além das exigências municipais de registro, ART e vistoria periódica." },
-      { question: "O que acontece se meu contrato atual for justo?", answer: "Informamos isso no relatório. Nosso compromisso é com a transparência — se o contrato está adequado, você terá essa certeza documentada." },
-      { question: "Atendem elevadores de qualquer marca?", answer: "Sim. Temos técnicos especializados para cada tipo de equipamento, independente da marca ou modelo." },
-    ],
-    relatedSlugs: ["diagnostico-condominial", "consultoria-para-sindicos", "apoio-obras-reformas"],
   },
 ];
 
