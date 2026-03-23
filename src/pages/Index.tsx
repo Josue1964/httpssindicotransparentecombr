@@ -217,8 +217,8 @@ export default function Index() {
                 <Button size="xl" className="bg-primary text-white hover:bg-primary/90 shadow-md font-semibold text-base" asChild>
                   <Link to="/solicitar-proposta">Solicitar proposta</Link>
                 </Button>
-                <Button size="xl" className="border-2 border-white text-white bg-transparent hover:bg-white/10 font-semibold text-base" asChild>
-                  <Link to="/contato">Fale conosco</Link>
+                <Button variant="whatsapp" size="xl" asChild>
+                  <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
                 </Button>
               </div>
             </div>
