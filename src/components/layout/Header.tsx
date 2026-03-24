@@ -119,6 +119,14 @@ export default function Header() {
               <Button variant="whatsapp" size="lg" asChild>
                 <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>WhatsApp</a>
               </Button>
+              <div className="mt-2 flex gap-3">
+                <a href="https://www.instagram.com/sindico_transparente/" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="rounded-lg p-2 text-white/80 transition-colors hover:text-white hover:bg-white/10">
+                  <Instagram size={22} />
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61583758199047" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="rounded-lg p-2 text-white/80 transition-colors hover:text-white hover:bg-white/10">
+                  <Facebook size={22} />
+                </a>
+              </div>
             </nav>
           </motion.div>
         )}
