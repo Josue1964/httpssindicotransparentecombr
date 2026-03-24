@@ -21,9 +21,17 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-primary-dark">
       <div className="container-wide section-padding flex h-16 items-center justify-between lg:h-18">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Síndico Transparente" className="h-14 w-auto lg:h-16" />
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-2">
+            <img src={logo} alt="Síndico Transparente" className="h-14 w-auto lg:h-16" />
+          </Link>
+          <a href="https://www.instagram.com/sindico_transparente/" target="_blank" rel="noopener noreferrer" className="rounded-lg p-1.5 text-white/70 transition-colors hover:text-white hover:bg-white/10">
+            <Instagram size={18} />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61583758199047" target="_blank" rel="noopener noreferrer" className="rounded-lg p-1.5 text-white/70 transition-colors hover:text-white hover:bg-white/10">
+            <Facebook size={18} />
+          </a>
+        </div>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 lg:flex">
