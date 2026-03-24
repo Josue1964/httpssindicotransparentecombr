@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Instagram, Facebook } from "lucide-react";
 import { services } from "@/data/services";
 import logo from "@/assets/logo-white.png";
 
@@ -46,6 +47,14 @@ export default function Footer() {
               <a href="mailto:contato@sindicotransparente.com.br" className="transition-colors hover:text-white">contato@sindicotransparente.com.br</a>
               <a href="tel:+5521993750707" className="transition-colors hover:text-white">(21) 99375-0707</a>
               <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">WhatsApp</a>
+            </div>
+            <div className="mt-4 flex gap-3">
+              <a href="https://www.instagram.com/sindico_transparente/" target="_blank" rel="noopener noreferrer" className="rounded-lg p-2 text-blue-200/70 transition-colors hover:text-white hover:bg-white/10">
+                <Instagram size={20} />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61583758199047" target="_blank" rel="noopener noreferrer" className="rounded-lg p-2 text-blue-200/70 transition-colors hover:text-white hover:bg-white/10">
+                <Facebook size={20} />
+              </a>
             </div>
           </div>
         </div>
