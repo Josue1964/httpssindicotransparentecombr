@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Facebook } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo-white.png";
 
@@ -53,6 +53,12 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
+          <a href="https://www.instagram.com/sindico_transparente/" target="_blank" rel="noopener noreferrer" className="rounded-lg p-2 text-white/80 transition-colors hover:text-white hover:bg-white/10">
+            <Instagram size={20} />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61583758199047" target="_blank" rel="noopener noreferrer" className="rounded-lg p-2 text-white/80 transition-colors hover:text-white hover:bg-white/10">
+            <Facebook size={20} />
+          </a>
           <Button size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-md font-semibold" asChild>
             <Link to="/solicitar-proposta">Solicitar proposta</Link>
           </Button>
