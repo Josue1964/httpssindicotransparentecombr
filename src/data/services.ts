@@ -1,4 +1,4 @@
-import { Briefcase, UserCheck, Search, ClipboardCheck, Construction, Settings, FileText, Target, MessageSquareMore, Radar, DoorOpen } from "lucide-react";
+import { Briefcase, UserCheck, Search, ClipboardCheck, Construction, Settings, FileText, Target, MessageSquareMore, Radar, DoorOpen, Globe } from "lucide-react";
 
 export interface ServiceData {
   slug: string;
@@ -391,6 +391,41 @@ export const services: ServiceData[] = [
       { question: "Atendem elevadores de qualquer marca?", answer: "Sim. Temos técnicos especializados para cada tipo de equipamento, independente da marca ou modelo." },
     ],
     relatedSlugs: ["diagnostico-condominial", "consultoria-para-sindicos", "apoio-obras-reformas"],
+  },
+  {
+    slug: "criacao-de-sites",
+    title: "Criação de Sites Profissionais",
+    shortTitle: "Sites Profissionais",
+    icon: Globe,
+    summary: "Para síndicos que já desempenham a função profissionalmente ou que desejam entrar no segmento condominial e querem fortalecer sua presença digital e captar mais clientes.",
+    description: "A criação de sites profissionais é voltada para síndicos profissionais que desejam fortalecer sua presença digital, transmitir credibilidade e captar mais clientes. Desenvolvemos sites modernos, responsivos e otimizados para conversão, com integração com WhatsApp, páginas de serviços, portfólio e formulários inteligentes — tudo pensado para posicionar o síndico profissional como referência no mercado condominial.",
+    audience: [
+      "Síndicos profissionais que querem captar mais clientes",
+      "Profissionais que estão entrando no segmento condominial",
+      "Síndicos que precisam de credibilidade e presença digital",
+      "Gestores condominiais que querem se diferenciar no mercado",
+    ],
+    benefits: [
+      "Credibilidade profissional online",
+      "Design moderno e responsivo",
+      "Integração com WhatsApp",
+      "Otimizado para captação de clientes",
+      "Páginas de serviços e portfólio",
+      "Formulários de contato inteligentes",
+    ],
+    steps: [
+      { title: "Briefing", description: "Entendemos suas necessidades e objetivos." },
+      { title: "Proposta", description: "Apresentamos um plano personalizado." },
+      { title: "Desenvolvimento", description: "Criamos seu site com design premium." },
+      { title: "Entrega", description: "Site publicado, pronto para captar clientes." },
+    ],
+    faqs: [
+      { question: "Preciso ter conhecimento técnico para gerenciar o site?", answer: "Não. O site é entregue pronto e com painel simples para atualizações básicas. Oferecemos orientação completa para que você consiga manter o conteúdo atualizado sem dificuldades." },
+      { question: "O site é otimizado para aparecer no Google?", answer: "Sim. Aplicamos boas práticas de SEO para que seu site tenha mais visibilidade nas buscas e atraia potenciais clientes de forma orgânica." },
+      { question: "Posso incluir meus serviços e portfólio?", answer: "Sim. O site inclui páginas dedicadas para apresentar seus serviços, cases de sucesso e diferenciais como síndico profissional." },
+      { question: "O site funciona bem no celular?", answer: "Sim. Todos os sites são desenvolvidos com design responsivo, garantindo uma experiência excelente em qualquer dispositivo — celular, tablet ou desktop." },
+    ],
+    relatedSlugs: ["sindico-profissional", "whatsapp-inteligente", "consultoria-para-sindicos"],
   },
 ];
 
