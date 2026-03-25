@@ -61,12 +61,6 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <a href="https://www.instagram.com/sindico_transparente/" target="_blank" rel="noopener noreferrer" className="rounded-lg p-2 text-white/80 transition-colors hover:text-white hover:bg-white/10">
-            <Instagram size={20} />
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61583758199047" target="_blank" rel="noopener noreferrer" className="rounded-lg p-2 text-white/80 transition-colors hover:text-white hover:bg-white/10">
-            <Facebook size={20} />
-          </a>
           <Button size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-md font-semibold" asChild>
             <Link to="/solicitar-proposta">Solicitar proposta</Link>
           </Button>
@@ -127,14 +121,6 @@ export default function Header() {
               <Button variant="whatsapp" size="lg" asChild>
                 <a href="https://wa.me/5521993750707" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>WhatsApp</a>
               </Button>
-              <div className="mt-2 flex gap-3">
-                <a href="https://www.instagram.com/sindico_transparente/" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="rounded-lg p-2 text-white/80 transition-colors hover:text-white hover:bg-white/10">
-                  <Instagram size={22} />
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61583758199047" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="rounded-lg p-2 text-white/80 transition-colors hover:text-white hover:bg-white/10">
-                  <Facebook size={22} />
-                </a>
-              </div>
             </nav>
           </motion.div>
         )}
