@@ -420,7 +420,7 @@ export const services: ServiceData[] = [
       { title: "Entrega", description: "Site publicado, pronto para captar clientes." },
     ],
     faqs: [
-      { question: "Preciso ter conhecimento técnico para gerenciar o site?", answer: "Não. O site é entregue pronto e com painel simples para atualizações básicas. Oferecemos orientação completa para que você consiga manter o conteúdo atualizado sem dificuldades." },
+      { question: "Preciso ter conhecimento técnico para gerenciar o site?", answer: "O site é entregue pronto. A partir daí temos uma pequena taxa de manutenção mensal para operações básicas, como: alterações, inclusões ou exclusões. Também podemos incluir novos serviços no site, caso deseje." },
       { question: "O site é otimizado para aparecer no Google?", answer: "Sim. Aplicamos boas práticas de SEO para que seu site tenha mais visibilidade nas buscas e atraia potenciais clientes de forma orgânica." },
       { question: "Posso incluir meus serviços e portfólio?", answer: "Sim. O site inclui páginas dedicadas para apresentar seus serviços, cases de sucesso e diferenciais como síndico profissional." },
       { question: "O site funciona bem no celular?", answer: "Sim. Todos os sites são desenvolvidos com design responsivo, garantindo uma experiência excelente em qualquer dispositivo — celular, tablet ou desktop." },
