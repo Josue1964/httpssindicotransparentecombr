@@ -1,4 +1,4 @@
-import { Briefcase, UserCheck, Search, ClipboardCheck, Construction, Settings, FileText, Target, MessageSquareMore, Radar, DoorOpen, Globe } from "lucide-react";
+import { Briefcase, UserCheck, Search, ClipboardCheck, Construction, Settings, FileText, Target, MessageSquareMore, Radar, DoorOpen, Globe, GraduationCap } from "lucide-react";
 
 export interface ServiceData {
   slug: string;
@@ -12,6 +12,9 @@ export interface ServiceData {
   steps: { title: string; description: string }[];
   faqs: { question: string; answer: string }[];
   relatedSlugs: string[];
+  badge?: string;
+  externalUrl?: string;
+  isFeatured?: boolean;
 }
 
 export const services: ServiceData[] = [
@@ -426,6 +429,45 @@ export const services: ServiceData[] = [
       { question: "O site funciona bem no celular?", answer: "Sim. Todos os sites são desenvolvidos com design responsivo, garantindo uma experiência excelente em qualquer dispositivo — celular, tablet ou desktop." },
     ],
     relatedSlugs: ["sindico-profissional", "whatsapp-inteligente", "consultoria-para-sindicos"],
+  },
+  {
+    slug: "curso-sindico-profissional",
+    title: "Curso de Síndico Profissional Grátis",
+    shortTitle: "Curso Grátis",
+    icon: GraduationCap,
+    badge: "Gratuito para sempre",
+    isFeatured: true,
+    externalUrl: "https://sindicotransparente.com.br/curso-de-sindico-profissional-gratuito/",
+    summary: "Aprenda os fundamentos da gestão condominial com um curso gratuito para sempre, pensado para síndicos moradores, síndicos profissionais e quem deseja atuar com mais segurança e organização.",
+    description: "O Curso de Síndico Profissional Grátis é uma oportunidade para quem deseja entender melhor a função do síndico, suas responsabilidades, desafios e boas práticas de gestão condominial. O conteúdo é indicado tanto para síndicos moradores quanto para quem deseja se preparar melhor para atuar de forma mais organizada, segura e profissional.\n\nAo acessar o curso, o usuário encontra uma base introdutória importante sobre administração condominial, rotina do síndico, tomada de decisão, organização de assembleias, relacionamento com moradores e aspectos práticos da gestão. É uma forma acessível de adquirir conhecimento, ampliar a visão sobre a função e começar com mais segurança.\n\nEste curso será gratuito para sempre, pois o objetivo é ampliar o acesso à informação e contribuir de forma prática para uma gestão condominial mais eficiente, consciente e profissional.\n\nO conteúdo também está aberto a sugestões de novos temas e melhorias, para que o curso evolua continuamente e se torne cada vez mais útil, eficiente e completo para síndicos, moradores e profissionais da área.",
+    audience: [
+      "Síndicos moradores que desejam se capacitar",
+      "Profissionais que querem entrar no segmento condominial",
+      "Síndicos profissionais que buscam atualização",
+      "Moradores interessados em entender melhor a gestão do condomínio",
+    ],
+    benefits: [
+      "Acesso gratuito para sempre",
+      "Conteúdo útil para síndicos moradores e profissionais",
+      "Melhor compreensão da gestão condominial",
+      "Mais segurança para tomar decisões",
+      "Apoio para quem está começando na função",
+      "Conteúdo em evolução contínua",
+      "Abertura para sugestões de melhoria",
+    ],
+    steps: [
+      { title: "Acesse o curso", description: "Clique no botão e acesse o conteúdo completo gratuitamente." },
+      { title: "Estude no seu ritmo", description: "O conteúdo está organizado para você avançar conforme sua disponibilidade." },
+      { title: "Aplique na prática", description: "Use o conhecimento adquirido para melhorar sua atuação como síndico." },
+      { title: "Sugira melhorias", description: "O curso está aberto a sugestões para evoluir continuamente." },
+    ],
+    faqs: [
+      { question: "O curso é realmente gratuito?", answer: "Sim, 100% gratuito e será gratuito para sempre. O objetivo é democratizar o acesso ao conhecimento sobre gestão condominial." },
+      { question: "Preciso ter experiência como síndico?", answer: "Não. O curso é indicado tanto para quem já atua como síndico quanto para quem deseja começar na função com mais preparo." },
+      { question: "O conteúdo é atualizado?", answer: "Sim. O curso está em evolução contínua e aberto a sugestões de novos temas e melhorias da comunidade." },
+      { question: "Recebo certificado ao concluir?", answer: "O foco do curso é o aprendizado prático. Consulte a página do curso para informações sobre certificação." },
+    ],
+    relatedSlugs: ["consultoria-para-sindicos", "sindico-profissional", "apoio-estrategico"],
   },
 ];
 

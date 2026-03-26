@@ -4,7 +4,7 @@ import { services } from "@/data/services";
 import { blogPosts } from "@/data/blog";
 import ScrollReveal from "@/components/ScrollReveal";
 import Layout from "@/components/layout/Layout";
-import { ArrowRight, CheckCircle2, MessageCircle, Shield, BarChart3, Users, Eye } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageCircle, Shield, BarChart3, Users, Eye, GraduationCap } from "lucide-react";
 
 const highlights = [
   { icon: Users, label: "Atendimento consultivo" },
@@ -63,6 +63,36 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Course Banner */}
+      <section className="bg-secondary py-12 lg:py-16">
+        <div className="container-wide section-padding">
+          <ScrollReveal>
+            <a
+              href="https://sindicotransparente.com.br/curso-de-sindico-profissional-gratuito/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex flex-col items-center gap-6 overflow-hidden rounded-2xl border-2 border-primary/20 bg-gradient-to-r from-primary-dark to-primary p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:border-primary/40 sm:flex-row sm:p-10"
+            >
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-white">
+                <GraduationCap size={32} />
+              </div>
+              <div className="flex-1 text-center sm:text-left">
+                <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+                  Gratuito para sempre
+                </div>
+                <h3 className="text-xl font-bold text-white sm:text-2xl">Curso de Síndico Profissional Grátis</h3>
+                <p className="mt-2 max-w-xl text-sm leading-relaxed text-blue-100/80">
+                  Uma oportunidade para aprender mais sobre gestão condominial, rotina do síndico e boas práticas, com conteúdo aberto a sugestões para evoluir continuamente.
+                </p>
+              </div>
+              <span className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-primary transition-transform group-hover:scale-105">
+                Quero acessar o curso <ArrowRight size={16} />
+              </span>
+            </a>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Services — light gray bg */}
       <section className="bg-secondary py-20 lg:py-28">
         <div className="container-wide section-padding">
@@ -78,13 +108,32 @@ export default function Index() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((s, i) => {
               const Icon = s.icon;
+              const isExternal = !!s.externalUrl;
+              const linkProps = isExternal
+                ? { href: s.externalUrl, target: "_blank", rel: "noopener noreferrer" }
+                : {};
+              const Wrapper = isExternal ? "a" : Link;
+              const wrapperProps = isExternal ? linkProps : { to: `/servicos/${s.slug}` };
               return (
                 <ScrollReveal key={s.slug} delay={i * 0.08}>
-                  <Link
-                    to={`/servicos/${s.slug}`}
-                    className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/30"
+                  <Wrapper
+                    {...(wrapperProps as any)}
+                    className={`group flex h-full flex-col rounded-2xl border p-6 shadow-sm transition-all duration-300 hover:shadow-lg ${
+                      s.isFeatured
+                        ? "border-primary/40 bg-gradient-to-b from-primary/5 to-card ring-1 ring-primary/20 hover:border-primary/60"
+                        : "border-border bg-card hover:border-primary/30"
+                    }`}
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                    {s.badge && (
+                      <span className="mb-3 inline-flex self-start items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
+                        {s.badge}
+                      </span>
+                    )}
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-xl transition-colors ${
+                      s.isFeatured
+                        ? "bg-primary text-white"
+                        : "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white"
+                    }`}>
                       <Icon size={24} />
                     </div>
                     <h3 className="mt-4 font-display text-lg font-bold">{s.title}</h3>
@@ -92,7 +141,7 @@ export default function Index() {
                     <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:underline">
                       Saiba mais <ArrowRight size={14} />
                     </span>
-                  </Link>
+                  </Wrapper>
                 </ScrollReveal>
               );
             })}
