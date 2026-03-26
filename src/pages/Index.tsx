@@ -4,7 +4,7 @@ import { services } from "@/data/services";
 import { blogPosts } from "@/data/blog";
 import ScrollReveal from "@/components/ScrollReveal";
 import Layout from "@/components/layout/Layout";
-import { ArrowRight, CheckCircle2, MessageCircle, Shield, BarChart3, Users, Eye } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageCircle, Shield, BarChart3, Users, Eye, GraduationCap } from "lucide-react";
 
 const highlights = [
   { icon: Users, label: "Atendimento consultivo" },
