@@ -28,13 +28,31 @@ export default function Services() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => {
               const Icon = s.icon;
+              const isExternal = !!s.externalUrl;
+              const Wrapper = isExternal ? "a" : Link;
+              const wrapperProps = isExternal
+                ? { href: s.externalUrl, target: "_blank", rel: "noopener noreferrer" }
+                : { to: `/servicos/${s.slug}` };
               return (
                 <ScrollReveal key={s.slug} delay={i * 0.08}>
-                  <Link
-                    to={`/servicos/${s.slug}`}
-                    className="group flex h-full flex-col rounded-2xl border border-border bg-card p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/30"
+                  <Wrapper
+                    {...(wrapperProps as any)}
+                    className={`group flex h-full flex-col rounded-2xl border p-8 shadow-sm transition-all duration-300 hover:shadow-lg ${
+                      s.isFeatured
+                        ? "border-primary/40 bg-gradient-to-b from-primary/5 to-card ring-2 ring-primary/20 hover:border-primary/60"
+                        : "border-border bg-card hover:border-primary/30"
+                    }`}
                   >
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                    {s.badge && (
+                      <span className="mb-3 inline-flex self-start items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary">
+                        {s.badge}
+                      </span>
+                    )}
+                    <div className={`flex h-14 w-14 items-center justify-center rounded-xl transition-colors ${
+                      s.isFeatured
+                        ? "bg-primary text-white"
+                        : "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white"
+                    }`}>
                       <Icon size={28} />
                     </div>
                     <h2 className="mt-5 font-display text-xl font-bold">{s.title}</h2>
@@ -42,7 +60,7 @@ export default function Services() {
                     <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:underline">
                       Saiba mais <ArrowRight size={14} />
                     </span>
-                  </Link>
+                  </Wrapper>
                 </ScrollReveal>
               );
             })}
