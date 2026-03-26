@@ -91,6 +91,7 @@ export default function Index() {
             </a>
           </ScrollReveal>
         </div>
+      </section>
 
       {/* Services — light gray bg */}
       <section className="bg-secondary py-20 lg:py-28">
