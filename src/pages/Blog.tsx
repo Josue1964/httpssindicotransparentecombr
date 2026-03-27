@@ -69,7 +69,7 @@ export default function Blog() {
             {filtered.map((post, i) => (
               <ScrollReveal key={post.slug} delay={i * 0.06}>
                 <a
-                  href="https://sindicotransparente.com.br/blog/"
+                  href="https://blog.sindicotransparente.com.br/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/30 hover:scale-[1.02]"
