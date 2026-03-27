@@ -13,8 +13,22 @@ export default function RequestProposal() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Proposta solicitada com sucesso! Entraremos em contato em breve.");
-    setForm({ nome: "", condominio: "", cidade: "", telefone: "", email: "", servico: "", unidades: "", necessidade: "", mensagem: "" });
+    const lines = [
+      `*Solicitação de Proposta*`,
+      ``,
+      `*Nome:* ${form.nome}`,
+      form.condominio ? `*Condomínio:* ${form.condominio}` : "",
+      form.cidade ? `*Cidade:* ${form.cidade}` : "",
+      `*Telefone:* ${form.telefone}`,
+      `*E-mail:* ${form.email}`,
+      form.servico ? `*Serviço:* ${form.servico}` : "",
+      form.unidades ? `*Unidades:* ${form.unidades}` : "",
+      form.necessidade ? `*Necessidade:* ${form.necessidade}` : "",
+      form.mensagem ? `*Mensagem:* ${form.mensagem}` : "",
+    ].filter(Boolean).join("%0A");
+    const url = `https://wa.me/5521993750707?text=${encodeURI(lines)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    toast.success("Redirecionando para o WhatsApp...");
   };
 
   const update = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
