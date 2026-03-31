@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Início", href: "/" },
   { label: "Serviços", href: "/servicos" },
   { label: "Como Funciona", href: "/como-funciona" },
-  { label: "Blog", href: "https://blog.sindicotransparente.com.br/", external: true },
+  { label: "Blog", href: "https://sindicotransparente.com.br/blog/", external: true },
   { label: "FAQ", href: "/faq" },
   { label: "Contato", href: "/contato" },
 ];
@@ -61,6 +61,9 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
+          <Button size="lg" className="border-2 border-accent text-accent bg-transparent hover:bg-accent hover:text-white shadow-md font-semibold" asChild>
+            <a href="https://forms.gle/hdQSavsSoQiYwRCd7" target="_blank" rel="noopener noreferrer">Cadastro de Fornecedores</a>
+          </Button>
           <Button size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-md font-semibold" asChild>
             <Link to="/solicitar-proposta">Solicitar proposta</Link>
           </Button>
@@ -115,7 +118,10 @@ export default function Header() {
                   </Link>
                 )
               )}
-              <Button size="lg" className="mt-2 bg-primary text-white hover:bg-primary/90 font-semibold" asChild>
+              <a href="https://forms.gle/hdQSavsSoQiYwRCd7" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="mt-2 inline-flex items-center justify-center rounded-lg border-2 border-accent px-4 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white">
+                Cadastro de Fornecedores
+              </a>
+              <Button size="lg" className="bg-primary text-white hover:bg-primary/90 font-semibold" asChild>
                 <Link to="/solicitar-proposta" onClick={() => setOpen(false)}>Solicitar proposta</Link>
               </Button>
               <Button variant="whatsapp" size="lg" asChild>
