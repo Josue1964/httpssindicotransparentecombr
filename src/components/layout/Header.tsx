@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Início", href: "/" },
   { label: "Serviços", href: "/servicos" },
   { label: "Como Funciona", href: "/como-funciona" },
-  { label: "Blog", href: "https://blog.sindicotransparente.com.br/", external: true },
+  { label: "Blog", href: "https://sindicotransparente.com.br/blog/", external: true },
   { label: "FAQ", href: "/faq" },
   { label: "Contato", href: "/contato" },
 ];
