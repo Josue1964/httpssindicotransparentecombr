@@ -61,6 +61,9 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
+          <Button size="lg" className="border-2 border-accent text-accent bg-transparent hover:bg-accent hover:text-white shadow-md font-semibold" asChild>
+            <a href="https://forms.gle/hdQSavsSoQiYwRCd7" target="_blank" rel="noopener noreferrer">Cadastro de Fornecedores</a>
+          </Button>
           <Button size="lg" className="bg-primary text-white hover:bg-primary/90 shadow-md font-semibold" asChild>
             <Link to="/solicitar-proposta">Solicitar proposta</Link>
           </Button>
