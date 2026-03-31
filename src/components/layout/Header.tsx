@@ -118,7 +118,10 @@ export default function Header() {
                   </Link>
                 )
               )}
-              <Button size="lg" className="mt-2 bg-primary text-white hover:bg-primary/90 font-semibold" asChild>
+              <a href="https://forms.gle/hdQSavsSoQiYwRCd7" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="mt-2 inline-flex items-center justify-center rounded-lg border-2 border-accent px-4 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white">
+                Cadastro de Fornecedores
+              </a>
+              <Button size="lg" className="bg-primary text-white hover:bg-primary/90 font-semibold" asChild>
                 <Link to="/solicitar-proposta" onClick={() => setOpen(false)}>Solicitar proposta</Link>
               </Button>
               <Button variant="whatsapp" size="lg" asChild>
